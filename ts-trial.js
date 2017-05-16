@@ -72,3 +72,20 @@ var arrayFromString = genericFunc("beep");
 console.log('arrayFromString: ', arrayFromString);
 var arrayFromNum = genericFunc(12);
 console.log('arrayFromNum: ', arrayFromNum);
+/* typescript facilities modularity, but in order to use it
+you need an external library like require.js or commonJS.
+You use typescript syntax for importing and exporting modules. */
+/* export syntax:
+
+var sayHello = function(): void {
+  console.log("hello");
+}
+export = sayHi;
+
+
+import syntax:
+
+import sayHello = require(./exporter);
+
+sayHello();
+*/
