@@ -59,3 +59,16 @@ var HappyMeal = (function (_super) {
 //new happyMeal will need the same 2 parameters as a new Menu
 var childrens_menu = new HappyMeal(["chicken nuggest", "fries", "apple slices"], 1);
 childrens_menu.list();
+//   Generic function,
+// templates for functions that can accept parameters of all data types
+// (use <T> for generics), like receives argument of type <T>
+// and returns an array with elements of type <T>
+function genericFunc(argument) {
+    var arrayOfT = [];
+    arrayOfT.push(argument);
+    return arrayOfT;
+}
+var arrayFromString = genericFunc("beep");
+console.log('arrayFromString: ', arrayFromString);
+var arrayFromNum = genericFunc(12);
+console.log('arrayFromNum: ', arrayFromNum);

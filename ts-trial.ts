@@ -74,3 +74,22 @@ var childrens_menu = new HappyMeal(["chicken nuggest", "fries", "apple slices"],
 
 childrens_menu.list();
 
+//   Generic function,
+// templates for functions that can accept parameters of all data types
+// (use <T> for generics), like receives argument of type <T>
+// and returns an array with elements of type <T>
+
+function genericFunc<T>(argument: T): T[] {
+  var arrayOfT: T[] = [];
+  arrayOfT.push(argument);
+  return arrayOfT;
+}
+
+var arrayFromString = genericFunc<string>("beep");
+console.log('arrayFromString: ', arrayFromString);
+
+var arrayFromNum = genericFunc<number>(12);
+console.log('arrayFromNum: ', arrayFromNum);
+
+
+
