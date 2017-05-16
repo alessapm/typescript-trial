@@ -62,11 +62,15 @@ class HappyMeal extends Menu {
   //but we want to overwrite some of it, so we redefine list()
   list(): void{
     console.log("Our special menu for kids is: ");
-    for (var i=9; i< this.items.length; i++){
-      console.log(this.items[i]);
+    for (var i=0; i< this.items.length; i++){
+      console.log(`* ${this.items[i]}`);
     }
 
   }
 } //closes HappyMeal class
 
+//new happyMeal will need the same 2 parameters as a new Menu
+var childrens_menu = new HappyMeal(["chicken nuggest", "fries", "apple slices"], 1);
+
+childrens_menu.list();
 
